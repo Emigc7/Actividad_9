@@ -1,0 +1,68 @@
+@host = http://localhost:3000
+
+
+###PETICIONES para api/users
+GET {{host}}/api/users
+
+###
+POST {{host}}/api/users
+Content-Type: application/json
+
+{
+    "nombre":"Ernesto",
+    "email":"Ernesto778@gmail.com",
+    "imagen": "123.jpg"
+}
+
+###
+PUT {{host}}/api/users/7
+Content-Type: application/json
+
+{
+    "nombre":"Ernestoo",
+    "email":"Ernesto875@gmail.com",
+    "imagen": "123.jpg"
+}
+
+###
+DELETE {{host}}/api/users/9
+
+###Obtener todos los posts de un autor
+GET  {{host}}/api/users/1
+
+
+
+
+
+###PETICIONES para api/posts
+GET  {{host}}/api/posts
+
+###
+POST   {{host}}/api/posts
+Content-Type: application/json
+
+{
+    "Titulo":"Tecnologia en el aula",
+    "Descripcion":"El uso de la tecnología en el aula mejora el acceso a la información, estimula la creatividad y facilita el aprendizaje personalizado.",
+    "Fecha_creacion": "2022-12-02",
+    "Categoria": "Educacion",
+    "autores_idAutores": "4"
+}
+
+###
+PUT  {{host}}/api/posts/7
+Content-Type: application/json
+
+{
+    "Titulo":"Tecnologia en el aula",
+    "Descripcion":"El uso de la tecnología en el aula mejora el acceso a la información, estimula la creatividad y facilita el aprendizaje personalizado.",
+    "Fecha_creacion": "2022-12-02",
+    "Categoria": "Educacion",
+    "autores_idAutores": "4"
+}
+
+###
+DELETE {{host}}/api/posts/6
+
+###Recupera la petición para ese ID y da los datos del usuario
+GET  {{host}}/api/posts/2
